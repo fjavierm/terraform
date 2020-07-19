@@ -7,4 +7,8 @@ provider "aws" {
 resource "aws_instance" "project_01_server" {
   ami           = "ami-099926fbf83aa61ed"
   instance_type = "t2.micro"
+
+  tags = {
+    Name = "ubuntu"
+  }
 }
