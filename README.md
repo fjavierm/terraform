@@ -23,3 +23,8 @@ Option `--auto-approve` skips the confirmation (yes).
 
 * `state show` - The `terraform state show` command is used to show the attributes of a single resource in the Terraform state.
 
+To check the output. To avoid executing `apply` we can execute `refresh` first.
+
+* `output` - The `terraform output` command is used to extract the value of an output variable from the state file.
+
+* `refresh` - The `terraform refresh` command is used to reconcile the state Terraform knows about (via its state file) with the real-world infrastructure. This can be used to detect any drift from the last-known state, and to update the state file.

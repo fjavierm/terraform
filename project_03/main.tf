@@ -144,3 +144,18 @@ resource "aws_instance" "pr03-web_server" {
     Name = "pr03-web_server"
   }
 }
+
+# Print the elastic IP when execution finishes
+output "server_public_ip" {
+  value = aws_eip.pr03-eip.public_ip
+}
+
+# Print the private IP of the server when execution finishes
+output "server_private_ip" {
+  value = aws_instance.pr03-web_server.private_ip
+}
+
+# Print the ID of the server when execution finishes
+output "server_id" {
+  value = aws_instance.pr03-web_server.id
+}
