@@ -4,7 +4,8 @@ provider "aws" {
   region  = "eu-west-1"
 }
 
-resource "aws_instance" "project_01_server" {
+# Create an EC2 instance
+resource "aws_instance" "pr01-server" {
   ami           = "ami-099926fbf83aa61ed"
   instance_type = "t2.micro"
 
